@@ -5,6 +5,7 @@
 %>
 <html>
 	<body>
-		Empresa <%= nomeEmpresa %> cadastrada com sucesso!
+<!--		Empresa <%= nomeEmpresa %> cadastrada com sucesso! !-->
+		Empresa ${empresa} cadastrada com sucesso!
 	</body>
 </html>

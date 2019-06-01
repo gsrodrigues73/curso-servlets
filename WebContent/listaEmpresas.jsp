@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.List, br.com.alura.gerenciador.servlet.Empresa" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -9,6 +10,14 @@
 	</head>
 	<body>
 		Lista de empresas:<br>
+		
+		<ul>
+			<c:forEach items="${empresas}" var="empresa">
+				<li>${empresa.nome }</li>
+			</c:forEach>
+		</ul>
+
+<!-- 		
 		<ul>
 <%
 		List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas");
@@ -19,5 +28,7 @@
 		}
 %>
 		</ul>
+ -->
+ 
 	</body>
 </html>
