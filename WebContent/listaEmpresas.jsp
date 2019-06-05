@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<c:if test="${not empty empresa}">
-			Empresa ${empresa} cadastrada com sucesso!<br />
+			Empresa ${empresa} cadastrada com sucesso!<br/><br/>
 		</c:if>
 		Lista de empresas:<br>
 		
