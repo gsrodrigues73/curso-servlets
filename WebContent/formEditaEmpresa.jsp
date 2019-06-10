@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ page import="br.com.alura.gerenciador.servlet.Banco" %>
-<%@ page import="br.com.alura.gerenciador.servlet.Empresa" %>
+<%@ page import="br.com.alura.gerenciador.modelo.Banco" %>
+<%@ page import="br.com.alura.gerenciador.modelo.Empresa" %>
 
 <c:url value="/editaEmpresa" var="linkServletEditaEmpresa"/>
 
