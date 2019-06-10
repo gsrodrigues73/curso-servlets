@@ -3,13 +3,12 @@ package br.com.alura.gerenciador.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // Configurar URL de chamada
-@WebServlet(urlPatterns="/oi")
+//@WebServlet(urlPatterns="/oi")
 public class OiMundoServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = -4628190983452256105L;
