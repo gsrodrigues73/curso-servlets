@@ -3,7 +3,8 @@
 <%@ page import="br.com.alura.gerenciador.modelo.Banco" %>
 <%@ page import="br.com.alura.gerenciador.modelo.Empresa" %>
 
-<c:url value="/editaEmpresa" var="linkServletEditaEmpresa"/>
+<!-- c:url value="/editaEmpresa" var="linkServletEditaEmpresa"/> -->
+<c:url value="/entrada" var="linkEntradaServlet"/>
 
 <%
 		String idEmpresa = request.getParameter("id");
@@ -20,7 +21,9 @@
 </head>
 <body>
 
-	<form action="${linkServletEditaEmpresa}" method="post">
+	<!-- form action="${linkServletEditaEmpresa}" method="post"> -->
+	<form action="${linkEntradaServlet}" method="post">
+		<input type="hidden" name="acao" value="EditaEmpresa">
 		<input type="hidden" name="id" value="<%=idEmpresa%>">
 		Nome: <input type="text" name="nome" value="<%=empresa.getNome() %>" />
 		Data Abertura: <input type="text" name="data" value="<fmt:formatDate value="<%=empresa.getDataAbertura() %>" pattern="dd/MM/yyyy"/>" />

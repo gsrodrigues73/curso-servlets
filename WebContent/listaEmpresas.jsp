@@ -19,7 +19,8 @@
 			<c:forEach items="${empresas}" var="empresa">
 				<li>${empresa.nome} - <fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/> 
 				<a href="formEditaEmpresa.jsp?id=${empresa.id}">Editar</a> 
-				<a href="excluirEmpresa?id=${empresa.id}">Excluir</a></li>
+				<!-- a href="excluirEmpresa?id=${empresa.id}">Excluir</a></li> -->
+				<a href="entrada?acao=RemovaEmpresa&id=${empresa.id}">Excluir</a></li>
 			</c:forEach>
 		</ul>
 
