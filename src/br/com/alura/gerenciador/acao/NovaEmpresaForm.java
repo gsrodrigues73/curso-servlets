@@ -6,18 +6,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.alura.gerenciador.modelo.Banco;
-
-public class RemovaEmpresa {
+public class NovaEmpresaForm {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String idEmpresa = request.getParameter("id");
 		
-		Banco banco = new Banco();
-		banco.retiraId(Integer.parseInt(idEmpresa));
-		
-//		response.sendRedirect("entrada?acao=ListaEmpresas");
-		return "redirect:entrada?acao=ListaEmpresas";
+		return "foward:formNovaEmpresa.jsp";
 	}
 
 }
