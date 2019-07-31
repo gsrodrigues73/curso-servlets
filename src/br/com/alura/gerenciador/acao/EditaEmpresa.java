@@ -12,8 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
-public class EditaEmpresa {
+public class EditaEmpresa implements Acao {
 	
+	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int idEmpresa = Integer.parseInt(request.getParameter("id"));
