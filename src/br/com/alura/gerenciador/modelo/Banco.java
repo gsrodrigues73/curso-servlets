@@ -1,6 +1,7 @@
 package br.com.alura.gerenciador.modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Banco {
@@ -67,6 +68,14 @@ public class Banco {
 				return;
 			}
 		}
+	}
+
+	public Usuario existeUsuario(String login, String senha) {
+		for (Usuario usuario : listaUsuario) {
+			if(usuario.ehIgual(login, senha))
+				return usuario;
+		}
+		return null;
 	}
 
 }
