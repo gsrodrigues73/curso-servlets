@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.alura.gerenciador.acao.Acao;
 
-@WebServlet("/entrada")
+@WebServlet(urlPatterns="/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,7 +28,6 @@ public class UnicaEntradaServlet extends HttpServlet {
 			response.sendRedirect("entrada?acao=LoginForm");
 			return;
 		}
-		
 		
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
 		

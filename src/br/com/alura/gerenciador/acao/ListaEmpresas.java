@@ -6,7 +6,6 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
@@ -21,12 +20,20 @@ public class ListaEmpresas implements Acao {
 //			return "redirect:entrada?acao=LoginForm";
 //		}
 		
+		// Monitoramento Filter
+//		long antes = System.currentTimeMillis(); // ajuda a medir tempo de execução
+		
 		System.out.println("listando empresas");
 		
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
 		
 		request.setAttribute("empresas", lista);
+
+		// Monitoramento Filter
+//		long depois = System.currentTimeMillis(); // ajuda a medir tempo de execução
+//		
+//		System.out.println("Tempo de execução = " + (depois - antes));
 		
 		return "foward:listaEmpresas.jsp";
 	}
