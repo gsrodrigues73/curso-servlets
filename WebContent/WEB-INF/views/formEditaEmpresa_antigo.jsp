@@ -21,6 +21,8 @@
 </head>
 <body>
 
+	<c:import url="logout-parcial.jsp" />
+	
 	<!-- form action="${linkServletEditaEmpresa}" method="post"> -->
 	<form action="${linkEntradaServlet}" method="post">
 		<input type="hidden" name="acao" value="EditaEmpresa">

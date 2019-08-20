@@ -10,6 +10,8 @@
 </head>
 <body>
 
+	<c:import url="logout-parcial.jsp" />
+
 	<!-- form action="${linkServletNovaEmpresa}" method="post"> -->
 	<form action="${linkEntradaServlet}" method="post">
 	
