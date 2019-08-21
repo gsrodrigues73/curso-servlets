@@ -23,9 +23,12 @@ public class EmpresasService extends HttpServlet {
 		
 		List<Empresa> empresas = new Banco().getEmpresas();
 		
-		String valor = request.getHeader("accept");
+		String valor = request.getHeader("Accept");
 		
-		if(valor.endsWith("xml")) {
+		System.out.println(valor);
+		
+//		if(valor.endsWith("xml")) {
+		if(valor.contains("xml")) {
 			// XML
 			XStream xstream = new XStream();
 			xstream.alias("empresa", Empresa.class);
@@ -44,7 +47,7 @@ public class EmpresasService extends HttpServlet {
 			
 		} else {
 			response.setContentType("application/json");
-			response.getWriter().print("{message: 'no content'}");
+			response.getWriter().print("{'message': 'no content'}");
 			
 		}
 	}
